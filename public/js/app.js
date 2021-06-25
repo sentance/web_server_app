@@ -7,7 +7,7 @@ form.addEventListener('submit', (e)=>{
     e.preventDefault();
     forecast.textContent = 'Loading....';
     forecast.textContent = '';
-    fetch(`http://localhost:3000/weather?address=${searchData.value}`).then((response)=>{
+    fetch(`/weather?address=${searchData.value}`).then((response)=>{
         response.json().then((data)=>{
 
             if(data.error){
